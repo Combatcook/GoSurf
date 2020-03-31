@@ -1,0 +1,14 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+
+/* write code here */
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+@import "media";
