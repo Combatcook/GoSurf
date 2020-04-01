@@ -1,10 +1,67 @@
 @import "vars";
 @import "libs";
 @import "fonts";
+@import "global";
 
 /* write code here */
-* {
-    box-sizing: border-box;
+
+.header {
+  position: relative;
+  height: 100vh;
+}
+
+.header__slider {
+  &-item {
+    height: 100vh;
+    background-image: url(../img/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+}
+
+.slider-item__info {
+  position: absolute;
+  right: 80px;
+  bottom: 115px;
+  text-align: right;
+  color: #fff;
+  text-transform: uppercase;
+
+  &-title {
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 86px;
+    margin-bottom: 48px;
+  }
+
+  &-subtitle {
+    margin-bottom: 5px;
+  }
+
+  &-subtext {
+    margin-bottom: 8px;
+  }
+
+  &-text {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 40px;
+  right: 80px;
+  cursor: pointer;
+  z-index: 4;
+
+  &__left {
+    right: 125px;
+  }
 }
 
 @import "media";
