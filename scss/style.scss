@@ -63,7 +63,7 @@
 
   &__search {
     padding-top: 15px;
-    padding-bottom: 30px;
+    padding-bottom: 35px;
   }
 
   &__location {
@@ -83,6 +83,20 @@
       top: 0;
       left: 0;
     }
+  }
+
+  &__map {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+  }
+
+  &__arrow {
+    position: absolute;
+    left: 210px;
+    bottom: 42px;
+    z-index: 3;
   }
 }
 
@@ -176,6 +190,18 @@
       padding-top: 6px;
       margin-bottom: 25px;
     }
+  }
+}
+
+.line-animation {
+  stroke-dashoffset: 600;
+  stroke-dasharray: 600;
+  animation: animdash 5s infinite 6s;
+}
+
+@keyframes animdash {
+  to {
+    stroke-dashoffset: 0;
   }
 }
 
