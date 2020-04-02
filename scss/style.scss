@@ -140,7 +140,7 @@
   }
 }
 
-.slider-dots {
+.slider-pagination {
   position: absolute;
   right: 40px;
   bottom: 36px;
@@ -148,13 +148,13 @@
   width: 100%;
 
   .slick-current {
-    .dots-box {
+    .pagination-box {
       border-top: 4px solid $green;
     }
   }
 }
 
-.dots-box {
+.pagination-box {
   width: 200px;
   display: flex;
   justify-content: space-between;
@@ -295,6 +295,89 @@
       text-align: center;
       display: none;
     }
+  }
+}
+
+.slider-map {
+  max-width: 1200px;
+  min-height: 635px;
+  background-image: url(../img/world-map-dots.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  margin: 0 auto;
+
+  .slick-list {
+    min-height: 635px;
+  }
+}
+
+.slider-dots {
+  position: relative;
+
+  &__circle {
+    width: 24px;
+    height: 24px;
+    background-color: $green;
+    border-radius: 50%;
+  }
+
+  &__content {
+    display: none;
+  }
+
+  &--1 { /* нужно порешать */
+    top: 335px;
+    left: 0;
+  }
+
+  &--2 {
+    top: 290px;
+    left: -15px;
+
+    .slider-dots__circle {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url(../img/mini-marker.png);
+        width: 14px;
+        height: 17px;
+        background-size: cover;
+        right: -22px;
+        top: -22px;
+      }
+    }
+  }
+
+  &--3 {
+    top: 320px;
+    left: 39px;
+  }
+
+  &--4 {
+    top: 502px;
+    left: -36px;
+  }
+
+  &--5 {
+    top: 213px;
+    left: -69px;
+  }
+
+  &--6 {
+    top: 554px;
+    left: -111px;
+  }
+
+  &--7 {
+    top: 395px;
+    left: -100px;
+  }
+
+  &--8 {
+    top: 500px;
+    left: 37px;
   }
 }
 
