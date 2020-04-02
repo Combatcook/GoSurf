@@ -24,8 +24,6 @@
     font-weight: 800;
     font-size: 200px;
     line-height: 156px;
-    text-transform: uppercase;
-    color: #FFFFFF;
     opacity: 0.07;
     max-width: 467px;
     position: absolute;
@@ -42,7 +40,6 @@
     border-right: 1px solid rgba(#fff, .25);
     height: 100vh;
     text-align: center;
-    color: #fff;
   }
 
   &__date {
@@ -74,6 +71,8 @@
     letter-spacing: 1.05px;
     position: relative;
     padding-left: 19px;
+    text-transform: capitalize;
+
     &::before {
       content: "";
       position: absolute;
@@ -105,8 +104,6 @@
   right: 80px;
   bottom: 115px;
   text-align: right;
-  color: #fff;
-  text-transform: uppercase;
 
   &-title {
     font-weight: 800;
@@ -149,7 +146,6 @@
   bottom: 36px;
   max-width: 960px;
   width: 100%;
-  color: #fff;
 
   .slick-current {
     .dots-box {
@@ -174,13 +170,13 @@
   &__name {
     font-weight: 300;
     line-height: 19px;
+    text-transform: capitalize;
   }
 }
 
 .menu {
   padding-top: 40px;
   a {
-    color: #fff;
     span {
       display: block;
       font-weight: 500;
@@ -189,6 +185,7 @@
       letter-spacing: 3px;
       padding-top: 6px;
       margin-bottom: 25px;
+      text-transform: capitalize;
     }
   }
 }
@@ -202,6 +199,102 @@
 @keyframes animdash {
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+/*--------------------*/
+
+.surf {
+  padding: 160px 0 120px;
+  background-image: url(../img/surf-loc.svg);
+  background-repeat: no-repeat;
+  background-position: right 200px;
+  background-size: auto;
+
+  &__subtitle {
+    text-align: right;
+    padding-right: 80px;
+    margin-top: -86px;
+  }
+}
+
+.surf-slider {
+  padding-top: 110px;
+
+  .slider-arrow {
+    top: 50px;
+    opacity: .25;
+  }
+
+  .slick-slide:nth-child(4n + 1) {
+    .surf-box {
+      margin-top: 32px;
+    }
+  }
+
+  .slick-slide:nth-child(4n + 3) {
+    .surf-box {
+      margin-top: 89px;
+    }
+  }
+
+  .slick-current {
+    .surf-box__inner {
+      background-color: rgba(#1C2121, .3);
+      &-btn {
+        display: block;
+      }
+    }
+  }
+}
+
+.surf-box {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__inner {
+    min-height: 750px;
+    background-color: rgba(#1C2121, .85);
+    position: relative;
+    transition: all .5s;
+
+    &:hover {
+      background-color: rgba(#1C2121, .3);
+    }
+
+    &-title {
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 36px;
+      padding: 72px 0 0 40px;
+      width: 140px;
+    }
+
+    &-location {
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 8px;
+      transform: rotate(-90deg);
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 40px;
+      bottom: 80px;
+      white-space: nowrap;
+      span {
+        font-weight: 100;
+      }
+    }
+
+    &-btn {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      display: none;
+    }
   }
 }
 
