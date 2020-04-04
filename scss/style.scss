@@ -295,6 +295,9 @@
 
     &:hover {
       background-color: rgba(#1C2121, .3);
+      .surf-box__inner-btn {
+        display: block;
+      }
     }
 
     &-title {
