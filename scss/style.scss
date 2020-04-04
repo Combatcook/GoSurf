@@ -46,7 +46,8 @@
     font-weight: 800;
     font-size: 72px;
     line-height: 64px;
-
+    width: 168px;
+  
     span {
       padding-top: 17px;
       font-weight: 300;
@@ -507,5 +508,9 @@
     left: 37px;
   }
 }
+
+/*--------------------*/
+
+
 
 @import "media";
