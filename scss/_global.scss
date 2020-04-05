@@ -19,6 +19,10 @@ body {
   text-transform: uppercase;
 }
 
+section {
+  padding: 160px 0 120px;
+}
+
 .container {
   max-width: 1920px;
   margin: 0 auto;
@@ -37,12 +41,11 @@ ul, li {
   padding: 0;
 }
 
-.headline-left {
+.headline-left, .headline-right {
   font-size: 22px;
   line-height: 32px;
   letter-spacing: 7.33333px;  
   opacity: 0.5;
-  padding-left: 103px;
   position: relative;
   display: inline-block;
 
@@ -52,8 +55,23 @@ ul, li {
     width: 80px;
     height: 1px;
     background-color: #fff;
-    left: 0;
     top: 50%;
+  }
+}
+
+.headline-left {
+  padding-left: 103px;
+
+  &::before {
+    left: 0;
+  }
+}
+
+.headline-right {
+  padding-right: 103px;
+
+  &::before {
+    right: 0;
   }
 }
 
@@ -94,6 +112,17 @@ ul, li {
     font-size: 40px;
     padding-right: 10px;
     margin-top: 8px;
+    span {
+      font-weight: 100;
+    }
+  }
+}
+
+.descr {
+  display: inline-block;
+  &__head {
+    font-weight: 800;
+    font-size: 40px;
     span {
       font-weight: 100;
     }
