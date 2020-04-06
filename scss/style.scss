@@ -515,6 +515,11 @@
   background-repeat: no-repeat;
   background-position: bottom right;
   padding-bottom: 265px;
+
+  .slider-arrow {
+    top: 225px;
+    opacity: 0.25;
+  }
 }
 
 .travel-slider {
@@ -530,17 +535,20 @@
   }
 
   &__descr {
-    position: relative;
     padding: 110px 0 0 132px;
     margin-top: -215px;
     min-height: 230px;
     background-repeat: no-repeat;
     background-position: right center;
 
-    img {
-      padding-left: 26px;
-      position: absolute;
-      bottom: 48px;
+    .descr__head {
+      position: relative;
+      padding-right: 78px;
+      img {
+        position: absolute;
+        right: 0;
+        top: -5px;
+      }
     }
   }
 
