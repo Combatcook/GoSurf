@@ -210,6 +210,7 @@
   background-repeat: no-repeat;
   background-position: right 200px;
   background-size: auto;
+  padding-bottom: 245px;
 
   &__subtitle {
     text-align: right;
@@ -510,10 +511,11 @@
 
 /*--------------------*/
 
-.travel {
+.holder {
   background-image: url(../img/travel-aside.png);
   background-repeat: no-repeat;
   background-position: bottom right;
+  padding-top: 35px;
   padding-bottom: 265px;
 
   .slider-arrow {
@@ -522,7 +524,7 @@
   }
 }
 
-.travel-slider {
+.holder-slider {
   &__head {
     background-repeat: no-repeat;
     background-position: top left;
@@ -544,10 +546,25 @@
     .descr__head {
       position: relative;
       padding-right: 78px;
+
       img {
         position: absolute;
         right: 0;
         top: -5px;
+      }
+
+      .holder__stars {
+        position: absolute;
+        right: -95px;
+        top: -3px;
+        
+        li {
+          display: inline-block;
+
+          img {
+            position: static;
+          }
+        }
       }
     }
   }
