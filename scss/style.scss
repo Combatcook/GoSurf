@@ -513,6 +513,20 @@
 
 .holder {
   background-image: url(../img/travel-aside.png);
+  &.sleep {
+    background-image: url(../img/sleep-aside.png);
+    padding-bottom: 60px;
+
+    .holder-slider__descr {
+      background-size: contain;
+      min-height: 300px;
+    }
+
+    .holder-slider__info {
+      padding: 7px 140px 0 132px;
+    }
+
+  }
   background-repeat: no-repeat;
   background-position: bottom right;
   padding-top: 35px;
@@ -606,7 +620,7 @@
       padding-left: 40px;
       position: relative;
 
-      span {
+      .holder-pricing__span {
         font-weight: normal;
         font-size: 14px;
         line-height: 36px;
@@ -618,6 +632,12 @@
       }
     }
   }
+}
+
+/*--------------------*/
+
+.shop {
+  padding: 240px 0 120px;
 }
 
 
