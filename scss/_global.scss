@@ -20,7 +20,7 @@ body {
 }
 
 section {
-  padding: 160px 0 120px;
+  padding: 35px 0 265px;
 }
 
 .container {
@@ -89,8 +89,6 @@ ul, li {
     color: #fff;
     font-size: 80px;
     position: absolute;
-    top: 8px;
-    right: -14px;
 
     &::after {
       content: "";
@@ -222,4 +220,19 @@ input[type=number]
 .quantity-button.quantity-down {
   position: absolute;
   right: 30px;
+}
+
+/* stars */
+
+.holder__stars {
+  li {
+    display: inline-block;
+    & + li {
+      margin-left: -25px;
+    }
+
+    img {
+      position: static;
+    }
+  }
 }

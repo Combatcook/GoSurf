@@ -1,5 +1,6 @@
 $(function() {
     
+  // sliders
   $('.header__slider').slick({
     infinite: true,
     fade: true,
@@ -43,7 +44,7 @@ $(function() {
     asNavFor: '.surf-slider',
   });
 
-  $('.holder__slider').slick({
+  $('.holder__slider, .shop__slider').slick({
     infinite: true,
     fade: true,
     prevArrow: '<img class="slider-arrow slider-arrow__left" src="img/arrow-left.svg" alt="arrow">',
@@ -84,7 +85,7 @@ $(function() {
 
   });
 
-  //calculator
+  // calculator
   $('.quantity-button').on('click', function(){
     var parents = $(this).parents('.holder-slider__info');
     let sum = $('.sum', parents).data('nights') * $('.nights', parents).val() + $('.sum', parents).data('guests') * $('.guests', parents).val();
@@ -96,5 +97,10 @@ $(function() {
     let sum = $('.sum', parents).data('nights') * $('.nights', parents).val() + $('.sum', parents).data('guests') * $('.guests', parents).val();
     $('.sum', parents).html('$' + sum);
   });
+
+  // circles on surfboard
+  $('.surfboard-box__circle').on('click', function() {
+    $(this).toggleClass('active');
+  }); 
 
 });
