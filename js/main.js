@@ -88,13 +88,13 @@ $(function() {
   // calculator
   $('.quantity-button').on('click', function(){
     var parents = $(this).parents('.holder-slider__info');
-    let sum = $('.sum', parents).data('nights') * $('.nights', parents).val() + $('.sum', parents).data('guests') * $('.guests', parents).val();
+    var sum = $('.sum', parents).data('nights') * $('.nights', parents).val() + $('.sum', parents).data('guests') * $('.guests', parents).val();
     $('.sum', parents).html('$' + sum);
   });
     
   $('.quantity').each(function() {
     var parents = $(this).parents('.holder-slider__info');
-    let sum = $('.sum', parents).data('nights') * $('.nights', parents).val() + $('.sum', parents).data('guests') * $('.guests', parents).val();
+    var sum = $('.sum', parents).data('nights') * $('.nights', parents).val() + $('.sum', parents).data('guests') * $('.guests', parents).val();
     $('.sum', parents).html('$' + sum);
   });
 
@@ -102,5 +102,22 @@ $(function() {
   $('.surfboard-box__circle').on('click', function() {
     $(this).toggleClass('active');
   }); 
+
+  // make slide active after clicking button "view surf"
+  $('.surf-box__inner-btn').on('click', function() {
+    let current = $('.slick-current');
+    let slideClicked = $(this).parent().parent().parent().parent();
+    let indexClicked = $(slideClicked).attr('data-slick-index') % 8;
+    $(slideClicked).addClass('slick-current'); 
+    $(current).removeClass('slick-current');
+
+    $('.slider-map .slick-slide').each(function() {
+      if ($(this).attr('data-slick-index') == indexClicked) {
+        $(this).addClass('slick-current');
+      }
+    });
+
+    $('.surf-slider').slick('slickGoTo', indexClicked);
+  });
 
 });
