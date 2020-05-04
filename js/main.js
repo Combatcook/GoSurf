@@ -120,4 +120,9 @@ $(function() {
     $('.surf-slider').slick('slickGoTo', indexClicked);
   });
 
+  $('.menu-btn').on('click', function() {
+    $('.menu').slideToggle(500);
+    $(this).toggleClass('btn--active');
+  });
+
 });

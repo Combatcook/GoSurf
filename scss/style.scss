@@ -176,6 +176,65 @@
   }
 }
 
+.menu-btn {
+  display: none;
+  width: 60px;  
+  height: 60px;
+  background-color: rgba(#fff, 0.1);
+  border-radius: 50%;
+  border: 1px solid #fff;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 20px;
+  top: 75px;
+  z-index: 10;
+  cursor: pointer;
+
+  &__line {
+    width: 40px;
+    height: 3px;
+    background-color: $green;
+    position: relative;
+    
+    &::before {
+      content: "";
+      background-color: $green;
+      width: 40px;
+      height: 3px;
+      position: absolute;
+      top: -9px;
+      right: 0;
+    }
+
+    &::after {
+      content: "";
+      background-color: $green;
+      width: 40px;
+      height: 3px;
+      position: absolute;
+      top: 9px;
+      right: 0;
+    }
+  }
+
+  &.btn--active {
+    .menu-btn__line {
+      height: 0;
+      
+      &::before {
+        transform: rotate(45deg);
+        top: -2px;
+      }
+  
+      &::after {
+        transform: rotate(-45deg);
+        top: -2px;
+      }
+    }
+  }
+}
+
 .menu {
   padding-top: 40px;
   a {
@@ -872,6 +931,5 @@
     opacity: 0.5;
   }
 }
-
 
 @import "media";
