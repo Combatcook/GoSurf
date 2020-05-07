@@ -120,9 +120,16 @@ $(function() {
     $('.surf-slider').slick('slickGoTo', indexClicked);
   });
 
+  // menu-btn on mobile
   $('.menu-btn').on('click', function() {
     $('.menu').slideToggle(500);
     $(this).toggleClass('btn--active');
+  });
+
+  // smooth anchor
+  $('.header__arrow').on('click', function() {
+    let destination = $('#surf').offset().top;
+    $("*").animate({scrollTop: destination}, 1000);
   });
 
 });
